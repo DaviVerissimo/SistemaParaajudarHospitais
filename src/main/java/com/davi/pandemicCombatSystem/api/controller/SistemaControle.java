@@ -1,10 +1,13 @@
 package com.davi.pandemicCombatSystem.api.controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.davi.pandemicCombatSystem.domain.model.EspercialidadeDoRecurso;
 import com.davi.pandemicCombatSystem.domain.model.Hospital;
 import com.davi.pandemicCombatSystem.domain.model.Recurso;
 
@@ -81,6 +84,19 @@ public class SistemaControle {
 		recurso = recursoController.IntercambioDeRecurso(hospitalDoador, hospitalreceptor, necessidade);
 		return recurso;
 		}
+	/**
+	 * Retorna todos os tipos de recurso que poderão serem cadrastados
+	 * @return
+	 */
+	@GetMapping("/recursos")
+	public ArrayList<String> listarTiposDeRecurso(){
+		List<EspercialidadeDoRecurso> list = Arrays.asList(EspercialidadeDoRecurso.values());
+		ArrayList<String> recursos = new ArrayList<String>();
+		for (int i = 0; i<list.size();i++) {
+			recursos.add(list.get(i).toString());
+		}
+		return recursos;
+	}
 	
 
 }

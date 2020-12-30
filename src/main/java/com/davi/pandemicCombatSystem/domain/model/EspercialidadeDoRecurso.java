@@ -9,7 +9,7 @@ public enum EspercialidadeDoRecurso {
     RESPIRADOR("Respirador");
 
 	EspercialidadeDoRecurso(String string) {
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }
