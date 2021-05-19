@@ -21,7 +21,7 @@ import com.davi.pandemicCombatSystem.domain.model.Recurso;
  */
 @RestController
 public class SistemaControle {
-	//O arnazenamento temporario esta sendo feito nesta variavel.
+	//O arnazenamento temporario esta sendo feito nesta variavel...
 	private ArrayList<Hospital> listaDeHospitais;
 	
 	public SistemaControle() {
